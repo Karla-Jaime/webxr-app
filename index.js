@@ -5,8 +5,7 @@ import { VRButton } from './js/examples/jsm/webxr/VRButton.js';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-//renderer.outputEncoding = THREE.sRGBEncoding;
+const renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -17,15 +16,16 @@ window.addEventListener('resize', onWindowResize);
 
 document.body.appendChild(VRButton.createButton(renderer));
 
+
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 //const cube = new THREE.Mesh( geometry, material );
 //scene.add( cube );
-
-const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 0.6 );
 scene.add( light );
 
 const loader = new GLTFLoader();
+
 
 loader.load( './models/escenita.gltf', 
  ( gltf ) => {
