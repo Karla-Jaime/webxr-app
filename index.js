@@ -112,8 +112,8 @@ loader.load( './models/lugar.gltf',
 
 });*/
 
-camera.position.z = 100;
-camera.position.y = 70;
+camera.position.z = 50;
+camera.position.y = 50;
 
 function onWindowResize() {
 
