@@ -45,6 +45,26 @@ loader.load( './models/escenasemestral.gltf',
   console.log( 'An error happened' );
 
 });
+
+loader.load( './models/cielo.gltf', 
+ ( gltf ) => {
+
+  scene.add( gltf.scene);
+},
+
+
+// called while loading is progressing
+( xhr ) => {
+
+  console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+},
+// called when loading has errors
+( error ) => {
+
+  console.log( 'An error happened' );
+
+});
 /*
 // pollito
 
