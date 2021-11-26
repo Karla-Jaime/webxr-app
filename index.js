@@ -16,7 +16,6 @@ window.addEventListener('resize', onWindowResize);
 
 document.body.appendChild(VRButton.createButton(renderer));
 
-
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 //const cube = new THREE.Mesh( geometry, material );
@@ -113,8 +112,8 @@ loader.load( './models/lugar.gltf',
 
 });*/
 
-camera.position.z = 20;
-camera.position.y = 10;
+camera.position.z = 50;
+camera.position.y = 70;
 
 function onWindowResize() {
 
