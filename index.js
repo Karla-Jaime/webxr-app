@@ -26,7 +26,7 @@ scene.add( light );
 const loader = new GLTFLoader();
 
 
-loader.load( './models/pollito.gltf', 
+loader.load( './models/escenita.gltf', 
  ( gltf ) => {
 
   scene.add( gltf.scene);
