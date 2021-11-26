@@ -112,7 +112,7 @@ loader.load( './models/lugar.gltf',
 
 });*/
 
-camera.position.z = 50;
+camera.position.z = 100;
 camera.position.y = 70;
 
 function onWindowResize() {
