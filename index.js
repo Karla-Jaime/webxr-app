@@ -27,7 +27,7 @@ scene.add( light );
 
 const loader = new GLTFLoader();
 
-loader.load( './models/conejito.gltf', 
+loader.load( './models/escenita.gltf', 
  ( gltf ) => {
 
   scene.add( gltf.scene);
@@ -46,6 +46,7 @@ loader.load( './models/conejito.gltf',
   console.log( 'An error happened' );
 
 });
+/*
 // pollito
 
 loader.load( './models/pollito.gltf', 
@@ -110,7 +111,7 @@ loader.load( './models/lugar.gltf',
 
   console.log( 'An error happened' );
 
-});
+});*/
 
 camera.position.z = 20;
 camera.position.y = 10;
@@ -126,13 +127,13 @@ function onWindowResize() {
 function animate() {
   //cube.rotation.x += 0.01;
   //cube.rotation.y += 0.01;
-	//requestAnimationFrame( animate );
-	//renderer.render( scene, camera );
-  renderer.setAnimationLoop( render );
+	// requestAnimationFrame( animate );
+	// renderer.render( scene, camera );
 
+  renderer.setAnimationLoop( render );
 }
 
 function render() {
   renderer.render(scene, camera);
 }
-//animate();
+animate();
