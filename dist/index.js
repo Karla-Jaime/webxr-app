@@ -5,8 +5,7 @@ import { VRButton } from './js/examples/jsm/webxr/VRButton.js';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-//renderer.outputEncoding = THREE.sRGBEncoding;
+const renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -21,13 +20,13 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 //const cube = new THREE.Mesh( geometry, material );
 //scene.add( cube );
-
-const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 0.6 );
 scene.add( light );
 
 const loader = new GLTFLoader();
 
-loader.load( './models/conejito.gltf', 
+
+loader.load( './models/escenasemestral.gltf', 
  ( gltf ) => {
 
   scene.add( gltf.scene);
@@ -46,6 +45,7 @@ loader.load( './models/conejito.gltf',
   console.log( 'An error happened' );
 
 });
+/*
 // pollito
 
 loader.load( './models/pollito.gltf', 
@@ -110,10 +110,10 @@ loader.load( './models/lugar.gltf',
 
   console.log( 'An error happened' );
 
-});
+});*/
 
-camera.position.z = 20;
-camera.position.y = 10;
+camera.position.z = 50;
+camera.position.y = 50;
 
 function onWindowResize() {
 
@@ -126,13 +126,13 @@ function onWindowResize() {
 function animate() {
   //cube.rotation.x += 0.01;
   //cube.rotation.y += 0.01;
-	//requestAnimationFrame( animate );
-	//renderer.render( scene, camera );
-  renderer.setAnimationLoop( render );
+	// requestAnimationFrame( animate );
+	// renderer.render( scene, camera );
 
+  renderer.setAnimationLoop( render );
 }
 
 function render() {
   renderer.render(scene, camera);
 }
-//animate();
+animate();
