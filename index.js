@@ -45,7 +45,7 @@ loader.load( './models/escenasemestral.gltf',
   console.log( 'An error happened' );
 
 });
-
+// cielo
 loader.load( './models/cielo.gltf', 
  ( gltf ) => {
 
@@ -65,10 +65,9 @@ loader.load( './models/cielo.gltf',
   console.log( 'An error happened' );
 
 });
-/*
-// pollito
 
-loader.load( './models/pollito.gltf', 
+// nubes
+loader.load( './models/cielo.gltf', 
  ( gltf ) => {
 
   scene.add( gltf.scene);
@@ -87,50 +86,6 @@ loader.load( './models/pollito.gltf',
   console.log( 'An error happened' );
 
 });
-
-// sol
-
-loader.load( './models/solesito.gltf', 
- ( gltf ) => {
-
-  scene.add( gltf.scene);
-},
-
-
-// called while loading is progressing
-( xhr ) => {
-
-  console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-},
-// called when loading has errors
-( error ) => {
-
-  console.log( 'An error happened' );
-
-});
-
-//otro
-
-loader.load( './models/lugar.gltf', 
- ( gltf ) => {
-
-  scene.add( gltf.scene);
-},
-
-
-// called while loading is progressing
-( xhr ) => {
-
-  console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-},
-// called when loading has errors
-( error ) => {
-
-  console.log( 'An error happened' );
-
-});*/
 
 camera.position.z = 50;
 camera.position.y = 50;
