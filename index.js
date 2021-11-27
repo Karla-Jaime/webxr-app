@@ -67,7 +67,7 @@ loader.load( './models/cielo.gltf',
 });
 
 // nubes
-loader.load( './models/cielo.gltf', 
+loader.load( './models/nubes.gltf', 
  ( gltf ) => {
 
   scene.add( gltf.scene);
